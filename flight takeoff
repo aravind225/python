@@ -1,0 +1,19 @@
+t=int(input())
+x=[]
+for _ in range(t):
+    l,f=[],[]
+    n,p,q,r=map(int,input().split())
+    for i in range(1,n+1):
+        a,b,c=p*i,q*i,r*i
+        if a<=n:
+            l.append(a)
+        if b<=n:
+            l.append(b)
+        if c<=n:
+            l.append(c)
+    for k in l:
+        if l.count(k)==1:
+            f.append(k)
+    x.append(len(f))
+for j in x:
+    print(j)
